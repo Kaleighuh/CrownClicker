@@ -1,6 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.Events;
+using System.Globalization;
 
 public class TextLabelBehavour : MonoBehaviour
 {
@@ -20,6 +21,6 @@ public class TextLabelBehavour : MonoBehaviour
 
     public void UpdateLabel(IntData obj)
     {
-        label.text = obj.intData.ToString(CultureInfo.InvariantCulture);
+        label.text = obj.value.ToString(CultureInfo.InvariantCulture);
     }
 }
