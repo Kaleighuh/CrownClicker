@@ -22,6 +22,7 @@ public class CoroutineObject : MonoBehaviour
         {
             Gold += goldValue;
             Debug.Log ("Gold equals " + Gold);
+            everySecondG.Invoke();
             if (Gold > 10)
             {
                 Ruby += rubyValue;

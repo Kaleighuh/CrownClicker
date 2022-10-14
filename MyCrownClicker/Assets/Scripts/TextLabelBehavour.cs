@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class TextLabelBehavour : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Text label;
+    public UnityEvent startEvent;
+
+    private void Start()
     {
-        
+        label = GetComponent<Text>();
+        startEvent.Invoke();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void UpdateLabel(FloatData obj)
     {
-        
+        label.text = obj.value.ToString(CultureInfo.InvariantCulture);
+    }
+
+    public void UpdateLabel(IntData obj)
+    {
+        label.text = obj.intData.ToString(CultureInfo.InvariantCulture);
     }
 }
