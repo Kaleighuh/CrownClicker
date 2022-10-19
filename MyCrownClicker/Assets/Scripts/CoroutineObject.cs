@@ -15,6 +15,8 @@ public class CoroutineObject : MonoBehaviour
     public int sparklesValue;
     //public float seconds = 1.0f;
     public WaitForSeconds waitTime = new WaitForSeconds(1);
+
+	public UnityEvent theshold1, theshold2, theshold3;
     
     private IEnumerator Start()
     {
