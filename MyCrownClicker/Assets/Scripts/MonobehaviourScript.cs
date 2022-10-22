@@ -21,13 +21,12 @@ public class MonobehaviourScript : MonoBehaviour
     {
         disableEvent.Invoke();
     }
-
-    private void onClickEnter()
+    void OnMouseDown()
     {
         onClick.Invoke();
     }
     
-    private void onDestroy()
+    private void OnDestroy()
     {
         destroyEvent.Invoke();
     }
