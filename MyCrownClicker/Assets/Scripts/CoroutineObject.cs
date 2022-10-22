@@ -41,4 +41,9 @@ public class CoroutineObject : MonoBehaviour
             yield return waitTime;
         }
     }
+
+	public void OnClickEnter()
+	{
+			
+	}
 }

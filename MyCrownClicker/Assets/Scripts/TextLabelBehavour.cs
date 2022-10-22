@@ -7,6 +7,7 @@ public class TextLabelBehavour : MonoBehaviour
 {
     public Text label;
     public UnityEvent startEvent;
+    public UnityEvent onClick;
 
     private void Start()
     {
@@ -22,5 +23,10 @@ public class TextLabelBehavour : MonoBehaviour
     public void UpdateLabel(IntData obj)
     {
         label.text = obj.value.ToString(CultureInfo.InvariantCulture);
+    }
+    
+    private void onClickEnter()
+    {
+        onClick.Invoke();
     }
 }
